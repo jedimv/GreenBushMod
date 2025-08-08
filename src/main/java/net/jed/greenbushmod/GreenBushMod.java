@@ -1,6 +1,10 @@
 package net.jed.greenbushmod;
 
 import com.mojang.logging.LogUtils;
+import net.jed.greenbushmod.block.ModBlocks;
+import net.jed.greenbushmod.item.ModCreativeModeTabs;
+import net.jed.greenbushmod.item.ModItems;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -25,9 +29,13 @@ public class GreenBushMod
     // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
 
-    public GreenBushMod(FMLJavaModLoadingContext context)
-    {
+    public GreenBushMod(FMLJavaModLoadingContext context) {
         IEventBus modEventBus = context.getModEventBus();
+
+        ModCreativeModeTabs.register(modEventBus);
+
+        ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
@@ -39,8 +47,11 @@ public class GreenBushMod
     {
     }
 
-    private void addCreative(BuildCreativeModeTabContentsEvent event)
-    {
+    private void addCreative(BuildCreativeModeTabContentsEvent event) {
+        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(ModItems.GREEN_BUSH);
+            event.accept(ModItems.LOOSE_STONE);
+        }
     }
 
     @SubscribeEvent
