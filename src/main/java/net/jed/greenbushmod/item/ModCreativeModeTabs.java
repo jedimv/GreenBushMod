@@ -15,14 +15,16 @@ public class ModCreativeModeTabs {
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, GreenBushMod.MOD_ID);
 
     public static final RegistryObject<CreativeModeTab> GREEN_BUSH_TAB = CREATIVE_MODE_TAB.register("green_bush_tab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.GREEN_BUSH.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.GREEN_BUSH.get()))
                     .title(Component.translatable("creativetab.green_bush_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
-                        output.accept(ModItems.GREEN_BUSH.get());
-                        output.accept(ModItems.LOOSE_STONE.get());
+                        output.accept(ModItems.FIRE_STARTER.get());
+                        output.accept((ModItems.HANDLE_METAL_DETECTOR.get()));
 
-
+                        output.accept(ModBlocks.GREEN_BUSH.get());
+                        output.accept(ModBlocks.LOOSE_PEBBLE.get());
                         output.accept(ModBlocks.THATCH_BLOCK.get());
+                        output.accept(ModBlocks.POTTERY_WHEEL.get());
                     })
                     .build());
 

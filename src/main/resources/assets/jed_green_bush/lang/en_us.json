@@ -1,8 +1,13 @@
 {
-  "item.jed_green_bush.green_bush": "Green Bush",
-  "item.jed_green_bush.loose_stone": "Loose Stone",
+  "item.jed_green_bush.fire_starter": "Fire Starter",
+  "item.jed_green_bush.handle_metal_detector": "Handle Metal Detector",
 
+  "block.jed_green_bush.green_bush": "Green Bush",
+  "block.jed_green_bush.loose_pebble": "Loose Pebble",
   "block.jed_green_bush.thatch_block": "Thatch Bale",
+  "block.jed_green_bush.pottery_wheel": "Pottery Wheel",
+
+  "tooltip.jed_green_bush.metal_detector": "Detects Metal-Like ores in a certain range.",
 
   "creativetab.green_bush_tab": "Green Bush Mod"
 }

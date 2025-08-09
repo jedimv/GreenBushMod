@@ -1,8 +1,13 @@
 {
-  "item.jed_green_bush.green_bush": "Arbusto",
-  "item.jed_green_bush.loose_stone": "Pedra Solta",
+  "item.jed_green_bush.fire_starter": "Acendedor",
+  "item.jed_green_bush.handle_metal_detector": "Detector de Metal de Mão",
 
+  "block.jed_green_bush.green_bush": "Arbusto",
+  "block.jed_green_bush.loose_pebble": "Pedra Solta",
   "block.jed_green_bush.thatch_block": "Fardo de Palha",
+  "block.jed_green_bush.pottery_wheel": "Roda de Oleiro",
+
+  "tooltip.jed_green_bush.metal_detector": "Detecta produtos de metal em um certo alcance.",
 
   "creativetab.green_bush_tab": "Green Bush Mod"
 }

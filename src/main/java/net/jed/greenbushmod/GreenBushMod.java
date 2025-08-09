@@ -2,8 +2,12 @@ package net.jed.greenbushmod;
 
 import com.mojang.logging.LogUtils;
 import net.jed.greenbushmod.block.ModBlocks;
+import net.jed.greenbushmod.block.entity.ModBlockEntities;
 import net.jed.greenbushmod.item.ModCreativeModeTabs;
 import net.jed.greenbushmod.item.ModItems;
+import net.jed.greenbushmod.screen.ModMenuTypes;
+import net.jed.greenbushmod.screen.PotteryWheelScreen;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.api.distmarker.Dist;
@@ -37,6 +41,9 @@ public class GreenBushMod
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
 
+        ModBlockEntities.register(modEventBus);
+        ModMenuTypes.register(modEventBus);
+
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
@@ -48,10 +55,6 @@ public class GreenBushMod
     }
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-            event.accept(ModItems.GREEN_BUSH);
-            event.accept(ModItems.LOOSE_STONE);
-        }
     }
 
     @SubscribeEvent
@@ -65,6 +68,8 @@ public class GreenBushMod
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
+
+            MenuScreens.register(ModMenuTypes.POTTERY_WHEEL_MENU.get(), PotteryWheelScreen::new);
         }
     }
 }
