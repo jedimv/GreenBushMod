@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "jed_green_bush:item/handle_metal_detector_2d"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "parent": "minecraft:item/handheld",
+  "loader": "forge:separate_transforms",
+  "base": {
+    "parent": "jed_green_bush:item/handle_metal_detector_3d"
+  },
+  "perspectives": {
+    "gui": {
+      "parent": "jed_green_bush:item/handle_metal_detector_2d"
+    },
+    "ground": {
+      "parent": "jed_green_bush:item/handle_metal_detector_2d"
+    },
+    "fixed": {
+      "parent": "jed_green_bush:item/handle_metal_detector_2d"
+    }
+  }
+}
