@@ -1,4 +1,4 @@
-package net.jed.greenbushmod.block.datagen.loot;
+package net.jed.greenbushmod.datagen.loot;
 
 import net.jed.greenbushmod.block.ModBlocks;
 import net.minecraft.data.loot.BlockLootSubProvider;

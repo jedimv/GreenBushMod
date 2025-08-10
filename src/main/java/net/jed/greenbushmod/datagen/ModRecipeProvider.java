@@ -1,6 +1,7 @@
-package net.jed.greenbushmod.block.datagen;
+package net.jed.greenbushmod.datagen;
 
 import net.jed.greenbushmod.GreenBushMod;
+import net.jed.greenbushmod.block.ModBlocks;
 import net.jed.greenbushmod.item.ModItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
@@ -22,12 +23,25 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
     @Override
     protected void buildRecipes(Consumer<FinishedRecipe> pWriter) {
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.FIRE_STARTER.get())
-                .pattern(" S")
-                .pattern("S ")
-                .define('S', Items.STICK)
-                .unlockedBy(getHasName(Items.STICK), has(Items.STICK))
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.THATCH_BLOCK.get())
+                .pattern("###")
+                .pattern("###")
+                .pattern("###")
+                .define('#', ModItems.STRAW.get())
+                .unlockedBy(getHasName(ModItems.STRAW.get()), has(ModItems.STRAW.get()))
                 .save(pWriter);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.STRAW.get(), 9)
+                .requires(ModBlocks.THATCH_BLOCK.get())
+                .unlockedBy(getHasName(ModBlocks.THATCH_BLOCK.get()), has(ModBlocks.THATCH_BLOCK.get()))
+                .save(pWriter);
+
+//        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.FIRE_STARTER.get())
+//                .pattern(" S")
+//                .pattern("S ")
+//                .define('S', Items.STICK)
+//                .unlockedBy(getHasName(Items.STICK), has(Items.STICK))
+//                .save(pWriter);
     }
     protected static void oreSmelting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTIme, String pGroup) {
         oreCooking(pFinishedRecipeConsumer, RecipeSerializer.SMELTING_RECIPE, pIngredients, pCategory, pResult, pExperience, pCookingTIme, pGroup, "_from_smelting");

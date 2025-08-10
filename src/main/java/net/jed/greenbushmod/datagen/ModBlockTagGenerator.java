@@ -1,4 +1,4 @@
-package net.jed.greenbushmod.block.datagen;
+package net.jed.greenbushmod.datagen;
 
 import net.jed.greenbushmod.GreenBushMod;
 import net.jed.greenbushmod.block.ModBlocks;

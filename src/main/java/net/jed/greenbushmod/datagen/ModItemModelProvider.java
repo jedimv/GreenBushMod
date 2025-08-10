@@ -1,4 +1,4 @@
-package net.jed.greenbushmod.block.datagen;
+package net.jed.greenbushmod.datagen;
 
 import net.jed.greenbushmod.GreenBushMod;
 import net.jed.greenbushmod.block.ModBlocks;
@@ -42,21 +42,9 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
-//        simpleItem(ModItems.SAPPHIRE);
-//        simpleItem(ModItems.RAW_SAPPHIRE);
-//
-//        simpleItem(ModItems.METAL_DETECTOR);
-//        simpleItem(ModItems.PINE_CONE);
-//        simpleItem(ModItems.STRAWBERRY);
-//        simpleItem(ModItems.STRAWBERRY_SEEDS);
-//
-//        simpleItem(ModItems.CORN);
-//        simpleItem(ModItems.CORN_SEEDS);
-//
-//        simpleItem(ModItems.BAR_BRAWL_MUSIC_DISC);
-//
-//        simpleBlockItem(ModBlocks.SAPPHIRE_DOOR);
-//
+        simpleItem(ModItems.STRAW);
+        //simpleItem(ModItems.FIRE_STARTER);
+
 //        fenceItem(ModBlocks.SAPPHIRE_FENCE, ModBlocks.SAPPHIRE_BLOCK);
 //        buttonItem(ModBlocks.SAPPHIRE_BUTTON, ModBlocks.SAPPHIRE_BLOCK);
 //        wallItem(ModBlocks.SAPPHIRE_WALL, ModBlocks.SAPPHIRE_BLOCK);

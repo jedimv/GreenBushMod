@@ -3,8 +3,8 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [32, 32],
 	"textures": {
-		"0": "handle_metal_detector_3d",
-		"particle": "handle_metal_detector_3d"
+		"0": "jed_green_bush:item/handle_metal_detector_3d",
+		"particle": "jed_green_bush:item/handle_metal_detector_3d"
 	},
 	"elements": [
 		{

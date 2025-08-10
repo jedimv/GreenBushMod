@@ -2,6 +2,7 @@ package net.jed.greenbushmod.block;
 
 import net.jed.greenbushmod.GreenBushMod;
 import net.jed.greenbushmod.block.custom.PotteryWheel;
+import net.jed.greenbushmod.block.custom.ThatchBlock;
 import net.jed.greenbushmod.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -27,7 +28,7 @@ public class ModBlocks {
 
     // 'CRAFTED_DECORATIVE' BLOCKS
     public static final RegistryObject<Block> THATCH_BLOCK = registerBlock("thatch_block",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.HAY_BLOCK))); // converter esse bloco para um customblock, para que não tenha colisão A NÃO SER pela chuva (++efeito de goteira abaixo)
+            () -> new ThatchBlock(BlockBehaviour.Properties.copy(Blocks.HAY_BLOCK))); // converter esse bloco para um customblock, para que não tenha colisão A NÃO SER pela chuva (++efeito de goteira abaixo)
 
     // 'STATIONS' BLOCKS
     public static final RegistryObject<Block> POTTERY_WHEEL = registerBlock("pottery_wheel",

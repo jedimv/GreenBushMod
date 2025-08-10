@@ -18,7 +18,8 @@ public class ModCreativeModeTabs {
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.GREEN_BUSH.get()))
                     .title(Component.translatable("creativetab.green_bush_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
-                        output.accept(ModItems.FIRE_STARTER.get());
+                        //output.accept(ModItems.FIRE_STARTER.get());
+                        output.accept(ModItems.STRAW.get());
                         output.accept((ModItems.HANDLE_METAL_DETECTOR.get()));
 
                         output.accept(ModBlocks.GREEN_BUSH.get());
