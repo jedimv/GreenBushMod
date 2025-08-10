@@ -36,12 +36,12 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModBlocks.THATCH_BLOCK.get()), has(ModBlocks.THATCH_BLOCK.get()))
                 .save(pWriter);
 
-//        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.FIRE_STARTER.get())
-//                .pattern(" S")
-//                .pattern("S ")
-//                .define('S', Items.STICK)
-//                .unlockedBy(getHasName(Items.STICK), has(Items.STICK))
-//                .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.FIRE_STARTER.get())
+                .pattern(" S")
+                .pattern("S ")
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(Items.STICK), has(Items.STICK))
+                .save(pWriter);
     }
     protected static void oreSmelting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTIme, String pGroup) {
         oreCooking(pFinishedRecipeConsumer, RecipeSerializer.SMELTING_RECIPE, pIngredients, pCategory, pResult, pExperience, pCookingTIme, pGroup, "_from_smelting");
