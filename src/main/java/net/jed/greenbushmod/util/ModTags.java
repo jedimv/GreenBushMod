@@ -13,6 +13,7 @@ import java.util.Objects;
 public class ModTags {
     public static class Blocks{
         public static final TagKey<Block> METAL_DETECTABLE = tag("metal_detectable");
+        public static final TagKey<Block> IGNITABLE = tag("ignitable");
 
         private static TagKey<Block> tag(String name){
             return BlockTags.create(Objects.requireNonNull(ResourceLocation.tryBuild(GreenBushMod.MOD_ID, name)));

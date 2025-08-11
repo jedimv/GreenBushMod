@@ -6,6 +6,8 @@ import net.jed.greenbushmod.util.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -22,6 +24,16 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
     @Override
     protected void addTags(HolderLookup.@NotNull Provider pProvider) {
         this.tag(ModTags.Blocks.METAL_DETECTABLE).addTag(Tags.Blocks.ORES);
+
+        // FLAMABLE BLOCKS
+        this.tag(ModTags.Blocks.IGNITABLE)
+                .addTag(BlockTags.CAMPFIRES)
+                .addTag(BlockTags.CANDLES)
+                .addTag(BlockTags.LOGS)
+                .addTag(BlockTags.PLANKS)
+                .addTag(BlockTags.LEAVES)
+                .addTag(BlockTags.WOOL)
+                .addTag(BlockTags.BEDS);
         // .add(ModBlocks.THIS_MOD_ORE_BLOCK.get()) <- adicionar isso para bloco ore custom do mod
 
         //this.tag(BlockTags.MINEABLE_WITH_PICKAXE) // .add(ModBlocks.THIS_MOD_BLOCK.get()) <- adicionar isso para bloco custom do mod
